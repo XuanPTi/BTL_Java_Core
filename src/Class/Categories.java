@@ -98,11 +98,10 @@ public class Categories implements IGenerics<Categories> {
 	public void ingputData(Categories t) {
 		// TODO Auto-generated method stub
 		boolean check = true;
-		Scanner sc = new Scanner(System.in);
 		do {
 			try {
 				System.out.print("Enter Id: ");
-				this.setCatalogId(Integer.parseInt(sc.nextLine()));
+				this.setCatalogId(new Scanner(System.in).nextInt());
 				break;
 			} catch (Exception e) {
 				// TODO: handle exception
@@ -113,7 +112,7 @@ public class Categories implements IGenerics<Categories> {
 		do {
 			try {
 				System.out.print("Enter Name: ");
-				this.setCatalogName(sc.nextLine());
+				this.setCatalogName(new Scanner(System.in).nextLine());
 				break;
 			} catch (Exception e) {
 				// TODO: handle exception
@@ -124,7 +123,7 @@ public class Categories implements IGenerics<Categories> {
 		do {
 			try {
 				System.out.print("Enter Description: ");
-				this.setDescriptions(sc.nextLine());
+				this.setDescriptions(new Scanner(System.in).nextLine());
 				break;
 			} catch (Exception e) {
 				// TODO: handle exception
@@ -135,7 +134,7 @@ public class Categories implements IGenerics<Categories> {
 		do {
 			try {
 				System.out.print("Enter Status: ");
-				String key = sc.nextLine();
+				String key = new Scanner(System.in).nextLine();
 				if(key.equals("TRUE") || key.equals("true") || key.equals("false") || key.equals("FALSE")) {
 					this.catalogStatus = Boolean.parseBoolean(key);
 				}
@@ -149,7 +148,7 @@ public class Categories implements IGenerics<Categories> {
 		do {
 			try {
 				System.out.print("Enter Parend: ");
-				this.setParentId(Integer.parseInt(sc.nextLine()));
+				this.setParentId(Integer.parseInt(new Scanner(System.in).nextLine()));
 				break;
 			} catch (Exception e) {
 				// TODO: handle exception
